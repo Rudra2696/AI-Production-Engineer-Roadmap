@@ -3,57 +3,58 @@
   <h1>🚀 AI Production Engineer Roadmap</h1>
   <h3>From Python Foundations to Deployed Agentic AI Systems</h3>
 
-  <img src="https://img.shields.io/badge/Status-In_Progress-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Duration-14--17_weeks-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Daily-3--4_hours-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Learning_in_public-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Focus-Python_∙_ML_∙_GenAI_∙_Agentic_AI_∙_MLOps-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Repo-Type-Study_Roadmap-blue?style=for-the-badge" />
 
   <p style="max-width: 760px; margin-top: 16px;">
-    This repository documents my structured journey to become an
-    <strong>AI Production Engineer</strong> – from core Python and machine learning
-    to <strong>Generative AI, RAG, Agentic AI, and production-grade MLOps</strong>.
+    This repository captures a structured journey toward becoming an
+    <strong>AI Production Engineer</strong>. It is organized around a multi‑phase
+    roadmap that spans core Python and machine learning through
+    <strong>Generative AI, Retrieval‑Augmented Generation, Agentic AI, and MLOps</strong>.
+    The emphasis is on practical, reproducible work rather than one‑off experiments.
   </p>
 </div>
 
 <hr/>
 
-<h2>📌 Roadmap Overview</h2>
+<h2>📌 Roadmap Phases</h2>
 
 <div style="display: flex; flex-wrap: wrap; gap: 16px;">
 
   <div style="flex: 1 1 230px; padding: 14px 16px; border-radius: 12px; background: #f4f7ff;">
     <h3>Phase 1 – Foundations</h3>
     <ul>
-      <li>Python, NumPy, Pandas, Matplotlib.</li>
-      <li>Math, classic ML, intro Deep Learning.</li>
-      <li>Intro to GenAI and prompt engineering.</li>
+      <li>Python programming, NumPy, Pandas, and visualization.</li>
+      <li>Mathematical foundations and classic machine‑learning methods.</li>
+      <li>Introductory deep‑learning and basic Generative AI concepts.</li>
     </ul>
   </div>
 
   <div style="flex: 1 1 230px; padding: 14px 16px; border-radius: 12px; background: #fdf5e6;">
     <h3>Phase 2 – GenAI & RAG</h3>
     <ul>
-      <li>RAG, embeddings, vector databases.</li>
-      <li>LangChain, evaluation, hallucination control.</li>
-      <li>Multimodal AI (vision + text) applications.</li>
+      <li>Embeddings, vector databases, and retrieval pipelines.</li>
+      <li>LangChain workflows and evaluation of generative systems.</li>
+      <li>Multimodal AI: combining text, images, and other modalities.</li>
     </ul>
   </div>
 
   <div style="flex: 1 1 230px; padding: 14px 16px; border-radius: 12px; background: #f3f8f3;">
     <h3>Phase 3 – Agentic AI</h3>
     <ul>
-      <li>Agentic AI fundamentals and multi‑agent systems.</li>
-      <li>Memory, tools, protocols, and coordination patterns.</li>
-      <li>Safety, governance, and real-world agent use cases.</li>
+      <li>Agentic AI fundamentals and multi‑agent system patterns.</li>
+      <li>Tool use, memory, coordination, and protocol‑style interaction.</li>
+      <li>Safety, governance, and domain‑specific agent design.</li>
     </ul>
   </div>
 
   <div style="flex: 1 1 230px; padding: 14px 16px; border-radius: 12px; background: #eef7ff;">
     <h3>Phase 4 – MLOps & Production</h3>
     <ul>
-      <li>FastAPI, Docker, and cloud deployment.</li>
-      <li>Monitoring, drift detection, retraining pipelines.</li>
-      <li>End‑to‑end production AI systems and maintenance.</li>
+      <li>APIs with FastAPI, containerization with Docker, and cloud deployment.</li>
+      <li>Monitoring, logging, drift detection, and retraining workflows.</li>
+      <li>Long‑term operation and maintenance of production AI systems.</li>
     </ul>
   </div>
 
@@ -61,107 +62,59 @@
 
 <hr/>
 
-<h2>📁 Repository Structure</h2>
+<h2>📁 Repository Layout</h2>
 
 <pre><code>AI-Production-Engineer-Roadmap/
-├── README.md                      # Roadmap + repo overview (this file)
-├── Phase-1-Foundations/           # Python, math, classic ML, GenAI basics
+├── README.md                              # High-level roadmap & repository overview
+├── Phase-1-Foundations/                   # Python, math, classic ML, GenAI basics
 │   └── Week-1-Python/
-│       └── Day-2-Environment/     # Daily practice: code, notes, resources
-├── Phase-2-GenAI/                 # RAG, embeddings, LangChain, multimodal
-├── Phase-3-AgenticAI/             # Agentic AI, multi-agent systems, protocols
-├── Phase-4-MLOps/                 # Deployment, monitoring, lifecycle
-└── progress-tracker/              # Checklists, assignments, milestones
+│       └── Python-Environment-Setup/      # Example topic folder: environment & tooling
+├── Phase-2-GenAI/                         # RAG, embeddings, LangChain, multimodal work
+├── Phase-3-AgenticAI/                     # Agentic AI, multi‑agent systems, protocols
+├── Phase-4-MLOps/                         # Deployment, monitoring, lifecycle tooling
+└── progress-tracker/                      # Optional checklists, notes, and planning
 </code></pre>
 
 <p>
-Each <strong>Day-X</strong> folder typically contains:
+The directory structure is intentionally simple and repeatable so that additional
+topics can be added without changing this overview.
 </p>
+
 <ul>
-  <li><code>practice-#.py</code> or notebooks – hands‑on exercises and mini‑projects.</li>
-  <li><code>notes.md</code> – concepts learned, decisions, and reflections.</li>
-  <li><code>resources.md</code> – curated links to courses, docs, and papers used that day.</li>
+  <li><code>Phase-*</code> directories group work by major skill area.</li>
+  <li>Each phase can contain multiple <code>Week-*</code> folders.</li>
+  <li>Each week can contain multiple topic folders (for example, <code>Python-Environment-Setup</code>, <code>Python-Basics</code>, <code>NumPy-Arrays</code>).</li>
 </ul>
 
 <hr/>
 
-<h2>📊 Progress Snapshot</h2>
-
-<table>
-  <tr>
-    <th>Phase</th>
-    <th>Week</th>
-    <th>Focus</th>
-    <th>Days Completed</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>Phase 1 – Foundations</td>
-    <td>Week 1</td>
-    <td>Python setup & basics</td>
-    <td>0 / 7</td>
-    <td>Starting</td>
-  </tr>
-  <tr>
-    <td>Phase 2 – GenAI & RAG</td>
-    <td>Week 4</td>
-    <td>LangChain, RAG pipeline</td>
-    <td>0 / 7</td>
-    <td>Planned</td>
-  </tr>
-  <tr>
-    <td>Phase 3 – Agentic AI</td>
-    <td>Week 11</td>
-    <td>Multi‑agent systems</td>
-    <td>0 / 7</td>
-    <td>Planned</td>
-  </tr>
-  <tr>
-    <td>Phase 4 – MLOps</td>
-    <td>Week 15</td>
-    <td>Deployment & monitoring</td>
-    <td>0 / 7</td>
-    <td>Planned</td>
-  </tr>
-</table>
+<h2>📂 Typical Topic Folder Contents</h2>
 
 <p>
-This table is updated manually as weeks and days are completed to keep a clear public record of progress.
+A topic folder is designed to be a self‑contained unit of learning and practice:
+</p>
+
+<ul>
+  <li><code>practice-#.py</code> or notebooks – exercises, experiments, or small utilities.</li>
+  <li><code>notes.md</code> – short written explanations, design decisions, and takeaways.</li>
+  <li><code>resources.md</code> – links to external material consulted while working.</li>
+</ul>
+
+<p>
+This structure makes it easy to revisit a specific concept later and understand both the code
+and the reasoning behind it.
 </p>
 
 <hr/>
 
-<h2>🧭 How to Use This Repository</h2>
-
-<ol>
-  <li>
-    Navigate to the current <strong>Phase → Week → Day</strong> folder
-    (for example, <code>Phase-1-Foundations/Week-1-Python/Day-2-Environment/</code>).
-  </li>
-  <li>
-    Implement the day's practice in code and notebooks,
-    following the tasks defined in the roadmap.
-  </li>
-  <li>
-    Document key learnings and decisions in <code>notes.md</code>,
-    and list references in <code>resources.md</code>.
-  </li>
-  <li>
-    Commit changes with a clear message, such as
-    <code>Day 2 – Python environment setup and verification</code>.
-  </li>
-</ol>
-
-<hr/>
-
-<h2>🎯 Goals of This Project</h2>
+<h2>🎯 Purpose of This Repository</h2>
 
 <ul>
-  <li>Build a transparent, day‑by‑day record of learning across the full AI stack.</li>
-  <li>Develop multiple deployable GenAI and Agentic AI projects with solid MLOps.</li>
-  <li>Create a portfolio that shows consistency, depth, and production‑oriented thinking.</li>
+  <li>Serve as a long‑term learning asset that mirrors a complete AI/ML/GenAI/Agentic AI roadmap.</li>
+  <li>Act as a reference for future projects, with concrete examples for each major concept.</li>
+  <li>Provide a portfolio artifact that reflects a production‑oriented way of thinking about AI systems.</li>
 </ul>
 
 <div align="center" style="margin-top: 24px;">
-  <em>Learning in public • One day, one commit, one production skill at a time.</em>
+  <em>One roadmap, many real systems — built topic by topic.</em>
 </div>
