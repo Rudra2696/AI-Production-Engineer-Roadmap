@@ -1,6 +1,13 @@
 a=int(input("Enter any integer : "))
 b=int(input("Enter any integer : "))
-c=int(input("Enter 1 for Addition\nEnter 2 for Subtraction\nEnter 3 for Multiplication\nEnter 4 Division \nEnter 5 for remainder\nEnter 6 for quotient\nEntyer 7 for power\nEnter your choice : "))
+c=int(input("""Enter 1 for Addition
+            Enter 2 for Subtraction
+            Enter 3 for Multiplication
+            Enter 4 Division 
+            Enter 5 for remainder
+            Enter 6 for quotient
+            Entyer 7 for power
+            Enter your choice : """))
 if(c==1):
     print(f"{a} +  {b} = {a+b}")
 elif(c==2):
