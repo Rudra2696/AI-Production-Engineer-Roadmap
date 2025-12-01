@@ -1,3 +1,5 @@
+## I practiced python randomly in this file
+
 # print("Hello World!")
 # print(7,"hello",9,sep="~")
 # print(5**2)
@@ -28,3 +30,16 @@
 #     print(i)
 
 
+## List comprehension
+# lst=[i for i in range(15)]
+# print(lst)
+
+# print([i for i in range(15) if i%2==0])
+
+# l=[4,32,6,7,2,9]
+# l.sort(reverse=True)
+# print(l)
+
+# to create tuple of single element 
+t=("Hello",)
+print(t)
