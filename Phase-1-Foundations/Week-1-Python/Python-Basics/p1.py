@@ -40,6 +40,32 @@
 # l.sort(reverse=True)
 # print(l)
 
-# to create tuple of single element 
-t=("Hello",)
-print(t)
+# # to create tuple of single element 
+# t=("Hello",)
+# print(t)
+
+# #to print {}
+# a=4
+# print(f'hey here value of {{a}} is {a}')
+
+## Doc string
+
+# def square(n):
+#     '''This function will take n and does the square of n and then print it'''
+#     print(n*n)
+
+# square(5)
+# print(square.__doc__)
+
+# # To create an empty set 
+# s = set()
+# b={}
+# print(type(s),type(b))
+
+# Short hand if else
+
+a=300
+b=80
+print("A") if(a>b) else print('=') if (a==b) else print('B')
+c= 1 if(a>b) else 0
+print(c)
