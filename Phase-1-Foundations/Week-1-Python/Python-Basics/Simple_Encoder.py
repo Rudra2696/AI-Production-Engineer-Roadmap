@@ -16,4 +16,4 @@ else:
     l.append('o')
     for i in l:
         s+=i
-print(s)
+print("Encoded message : ",s)
