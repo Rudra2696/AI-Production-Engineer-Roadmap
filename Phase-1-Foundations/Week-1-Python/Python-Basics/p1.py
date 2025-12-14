@@ -147,6 +147,9 @@
 
 # add(5,6)
 
-import time
+# import time
 
-print(time.strftime('%H:%M:%S',time.localtime()))
+# print(time.strftime('%H:%M:%S',time.localtime()))
+
+a=[1,2,3,4,5,6,7]*100
+print(len(a))
