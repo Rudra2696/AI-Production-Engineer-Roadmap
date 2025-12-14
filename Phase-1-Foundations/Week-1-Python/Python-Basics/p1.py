@@ -62,10 +62,91 @@
 # b={}
 # print(type(s),type(b))
 
-# Short hand if else
+## Short hand if else
 
-a=300
-b=80
-print("A") if(a>b) else print('=') if (a==b) else print('B')
-c= 1 if(a>b) else 0
-print(c)
+# a=300
+# b=80
+# print("A") if(a>b) else print('=') if (a==b) else print('B')
+# c= 1 if(a>b) else 0
+# print(c)
+
+## Enumerate function
+
+# s='hello'
+
+# for index, character in enumerate(s,start=1):
+#     print("It's l",index) if(character=='l') else ''
+
+## passing function to function lambda function
+
+# def add(fn,value):
+#     print('cube=',fn(value))
+
+# add(lambda x : x*x*x,3)
+
+# def he(*a):
+#     print(a)
+
+# he(5,7,9)    
+
+
+## Map function
+
+# print(list(map(lambda x : x*x, [1,8,9,5,6])))
+
+## Filter function
+# print(list(filter(lambda x : x>3,[1,2,3,5,67])))
+
+# # Reduce function
+# from functools import reduce
+# print(reduce(lambda x,y : x+y,[1,23,4,56,7,88,9]))
+
+# # constructor
+
+# class Hey:
+    
+#     def __init__(self,a=8,b=8):
+#         self.a=a
+#         self.b=b
+    
+#     def avg(self):
+#         print("Average = ",(self.a+self.b)/2)
+
+# c=Hey()
+# c.avg()
+# d=Hey(5,5)
+# d.avg()
+    
+# # Decoraters 
+
+# def dec(fx):
+#     def mfx():
+#         print("Hello!")
+#         fx()
+#         print("Thankyou for choosing us!!")
+#     return mfx
+
+# @dec
+# def hey():
+#     print("Wow")
+
+# hey()
+
+# # Decoraters with arguments
+
+# def deco(fx):
+#     def mfx(*args,**kwargs):
+#         print("Hello!!")
+#         fx(*args,**kwargs)
+#         print("Thankyou for choosing us!!")
+#     return mfx
+
+# @deco
+# def add(a,b):
+#     print(a+b)
+
+# add(5,6)
+
+import time
+
+print(time.strftime('%H:%M:%S',time.localtime()))
