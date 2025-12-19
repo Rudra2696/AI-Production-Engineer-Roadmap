@@ -307,14 +307,38 @@ import numpy as np
 # print(np.cumsum(arr))  # cumulative sum -> [(1) (1+2) (1+2+3)]
 # print(np.cumprod(arr)) # cumulative product -> [(1) (1*2) (1*2*3)]
 
-# Condition based choice
+# # Condition based choice
 
-arr = np.array([1,2,3,4])
-print(np.where(arr<3,'low','high')) # like if -else (condition, true, false) 
-print(np.where(arr<3))              # To get the position of element which satisfy condition 
-print(np.argwhere(arr>3))           # return the index where the condition satisfies
-print(np.nonzero(arr))              # return the index of non-zero elements
-print(np.logical_and(arr>1,arr<4))  # return true false according to both 'AND'condition
-print(np.logical_not(arr>1,arr<4))  # return true false according to both 'NOT 'condition
-print(np.logical_or(arr>1,arr<4))   # return true false according to both 'OR' condition
-print(np.logical_xor(arr>1,arr<4))  # return true false according to both 'xOR' condition
+# arr = np.array([1,2,3,4])
+# print(np.where(arr<3,'low','high')) # like if -else (condition, true, false) 
+# print(np.where(arr<3))              # To get the position of element which satisfy condition 
+# print(np.argwhere(arr>3))           # return the index where the condition satisfies
+# print(np.nonzero(arr))              # return the index of non-zero elements
+# print(np.logical_and(arr>1,arr<4))  # return true false according to both 'AND'condition
+# print(np.logical_not(arr>1,arr<4))  # return true false according to both 'NOT 'condition
+# print(np.logical_or(arr>1,arr<4))   # return true false according to both 'OR' condition
+# print(np.logical_xor(arr>1,arr<4))  # return true false according to both 'xOR' condition
+
+# Vectorization (To apply custom function on array)
+
+# def sqr(arr):
+#     return arr*arr
+
+# arr = np.array([4,3,9,5])
+# vectorize = np.vectorize(sqr)
+# print(vectorize(arr))
+
+
+# # To store and check none, infinite (+ve, -ve) values
+
+# arr = np.array([3,np.nan,9,np.inf,8,-np.inf])
+
+# print(np.logical_or(np.isnan(arr),np.isinf(arr)))
+
+
+# # To replace none and infinite value
+
+# arr = np.array([3,np.nan,9,np.inf,8,-np.inf])
+
+# new = np.nan_to_num(arr)
+# print(new)
