@@ -99,5 +99,137 @@ df = pd.read_csv('Student.csv')
 
 # ## To apply function on particular column
 
-# df['Name_length'] = df['Name'].apply(len)
+# df['Name_length'] = df['Name'].apply(len)  # For inbuilt method
 # print(df)
+
+# def Grade(Marks): # For user defined function
+#     if(Marks>=90):
+#         return 'A++'
+#     elif(Marks>=80 and Marks<90):
+#         return 'A+'
+#     elif(Marks>=70 and Marks<80):
+#         return 'A'
+#     elif(Marks>=60 and Marks<70):
+#         return 'B'
+#     else:
+#         return 'C'
+    
+# df['Grade'] = df['Marks'].apply(Grade)
+# print(df)
+
+## To appply string function
+
+# print(df['Name'].str.lower())  # Without creating new column
+# df['Name_lower'] = df['Name'].str.lower() # By creating new function
+# print(df)
+
+## To remove a column
+
+# df.drop(columns=['Gender','Age'],inplace=True)  # For single value just pass only one column name
+# print(df)
+
+## To check weater there is a null value in data
+
+# print(df.isnull())  # It will return table of True/false (True->null)
+# print(df.isnull().sum())  # It will return total number of null vaalue of each column
+# print(df.info())      # It will return details of Null/Total/Not-Null/Datatypes values of each column
+
+## To drop null value row
+
+# df.dropna(inplace=True)
+# df.dropna(subset=['Name','Age'],inplace=True)  # It will drop only that row in which has null value only in 'Name' column
+# print(df)
+
+## To fill null value
+
+# df.fillna('Unknown',inplace=True) # For all colummn
+# df['Name'].fillna('Unknown',inplace=True) # For specific colummn
+# df['Marks'].fillna(df['Marks'].mean(),inplace=True) # It will fill average value of that column in null-value
+# print(df)
+# df.fillna(method='ffill',inplace=True)  # It will fill previous (upper) value to current value (after uppper value if null value)
+# df["Marks"].ffill(inplace=True) # Another method
+# print(df)
+
+# df.fillna(method='bfill',inplace=True)  # It will fill next (lower) value to current value (befor lowe value if null value)
+# df["Marks"].bfill(inplace=True) # Another method
+# print(df)
+
+## To remove duplicates
+
+# df = {                                                 # Created new Dicitonary
+#     'Name' : ['Rudra','Dhruv','Yug','Kunj','Kunj'],
+#     'Age' : [19,16,17,13,13]
+# }
+# df = pd.DataFrame(df)       # Converted dictionary to dataframe
+# print(df)
+
+# df.drop_duplicates(inplace=True)   # It will remove duplicates and keep first value
+# df.drop_duplicates(keep='last',inplace=True)   # It will remove duplicates and keep last value
+# print(df)
+# df.drop_duplicates(subset='Age',inplace=True) # It will remove duplicate based on column (for multiple column pass in list)
+# print(df)
+
+## To convert datatype in date & time (just date & time only)
+
+df['AdmissionDate'] = pd.to_datetime(df['AdmissionDate']) # If date is not in yyyy-mm-dd format so use format method 
+df['ExamDateTime'] = pd.to_datetime(df['ExamDateTime']) # If date is not in yyyy-mm-dd format so use format method 
+
+## To perform operations on date
+
+# df['Year'] = df['AdmissionDate'].dt.year             # It will return year
+# df['Month'] = df['AdmissionDate'].dt.month           # It will return month
+# df['Day'] = df['AdmissionDate'].dt.day               # It will return day
+# df['Weekday'] = df['AdmissionDate'].dt.day_name()    # It will return name of week day (Monday/Friday/Sunday)
+# print(df)
+# print(df[df['AdmissionDate']>='2023-07-15'])         # It will return only rows which satisfies following condition
+# df.sort_values('AdmissionDate',inplace=True)           # To sort data by dates  
+# print(df)
+# df['TermDays'] = (df['ExamDateTime'] - df['AdmissionDate']).dt.days   # It return days from admission date to exam date
+# print(df)
+
+## To perform aggregate operation
+
+# print(df['Marks'].sum())       # It will return sum of column values
+# print(df['Marks'].mean())      # It will return average of column values 
+# print(df['Marks'].min())       # It will return minimum value of column
+# print(df['Marks'].max())       # It will return maximum value of column
+# print(df['Course'].count())     # It will return total number of values
+# print(df['Course'].nunique())   # It will return total number of unique value
+# print(df['Course'].unique())    # It will return all the unique values
+
+## To perform aggregate function with groupby
+
+# print(df.groupby('Course')['Marks'].mean())   # It wil return average values with groupby method for single column
+# print(df.groupby('Course')['Marks'].min())   # It wil return minimum values with groupby method for single column
+# print(df.groupby('Course')['Marks'].max())   # It wil return maximum values with groupby method for single column
+# print(df.groupby(['Course','City'])['Marks'].mean())   # It wil return average values with groupby method for multiple column
+# print(df.groupby(['Course','City'])['Marks'].min())   # It wil return minimum values with groupby method for multiple column
+# print(df.groupby(['Course','City'])['Marks'].max())   # It wil return maximum values with groupby method for multiple column
+
+## To perform more than one aggregate function in one line
+
+# print(df.groupby(['Course','City'])['Marks'].agg(['min','max','mean'])) # It will return mutiple aggregate values 
+
+## To perform aggregate function on multiple column with groupby
+
+# print(df.groupby('Course').agg({'Marks' : 'mean', 'AdmissionDate': 'min'}))
+# print(df['City'].value_counts()) # It will return numbers of unique values in particular column with total values
+# print(df.groupby('City').agg({'City' : 'count','Marks' : 'mean'}))  # Another method
+
+## To set column name instead of aggregate function name
+
+# print(df.groupby('City').agg(
+#     Minimum_marks = ('Marks','min'),
+#     Maximum_marks = ('Marks','max'),
+# ))
+
+## To create pivot table
+
+# print(pd.pivot_table(
+#     df,
+#     index = 'City',
+#     columns = 'Course',
+#     values = 'Marks',
+#     aggfunc = 'mean',
+#     fill_value = 0
+# ))
